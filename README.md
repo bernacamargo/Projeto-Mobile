@@ -1,7 +1,7 @@
 ## Projeto Mobile
 
 ### Introdução
-Este projeto consiste em uma loja de livros online que possue um desconto especial para compras de livros distintos. Nesse web app é possível buscar por livros e manipular o carrinho de compras, podendo aumentar ou diminui a quantidade de cada livro, além de também poder limpar o carrinho de compras.
+Este projeto consiste em uma loja de livros online que possue um desconto especial para compras de livros distintos. Nesse web app é possível buscar por livros e manipular o carrinho de compras, podendo aumentar ou diminuir a quantidade de cada livro, além de também poder limpar o carrinho de compras.
 
 A regra de desconto aplicada é a seguinte:
 - 2 livros distintos: 5%
