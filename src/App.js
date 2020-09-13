@@ -1,24 +1,39 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import CartContext from './contexts/cartContext';
+import Navbar from './components/Navbar';
+import BooksList from './components/BooksList';
+import booksOriginal from './books.json';
+
+// Add price(100.00) and id(index) to all books on original list
+booksOriginal.map((book, index) => {
+  const price = 100.00;
+  booksOriginal[index] = { ...book, price, id: index };
+});
 
 function App() {
+  const [cart, setCart] = useState([]);
+  const [booksList, setBooksList] = useState(booksOriginal);
+
+  const searchBooks = (title) => {
+    const newBooksList = [];
+    // Search for title in books array
+    booksOriginal.map((book) => {
+      // Verify if the book title cotain the title wanted by user
+      if (book.title.toLowerCase().includes(title.toLowerCase())) {
+        newBooksList.push(book);
+      }
+    });
+
+    // Update books list state with the new books list
+    setBooksList(newBooksList);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <CartContext.Provider value={[cart, setCart]}>
+        <Navbar searchBooks={searchBooks} />
+        <BooksList booksList={booksList} />
+      </CartContext.Provider>
     </div>
   );
 }
