@@ -19,6 +19,22 @@ A regra de desconto aplicada é a seguinte:
 - React Hooks
 - Repositório de livros: [100-best-books](https://github.com/benoitvallon/100-best-books)
 
+### Como instalar
+- Faça o [download](https://github.com/bernacamargo/Projeto-Mobile/archive/master.zip) do repositório
+- Abra ele através do terminal
+- Instale as dependências através de um dos comandos abaixo
+```
+yarn install
+npm install
+```
+- Execute o projeto com um dos comandos abaixo
+
+```
+yarn start
+npm run start
+```
+- Isso irá abrir uma guia no seu navegador com o projeto pronto.
+
 ### Contribuição
 
 ![perfil_img](https://avatars3.githubusercontent.com/u/17216894?s=25&u=cd5b794ddb3178e80110945f204d555ebcb54ff5&v=4) 
